@@ -4,7 +4,7 @@ var letters = $(".list");
 var numMax = false;
 var list = [];
 
-//button click returns random consonant pushes letter to list array
+//button click returns random consonant then pushes letter to list array
 consButton.on('click', function(){
 	if(!numMax) {
 	var random = generate(consonants);
@@ -14,7 +14,7 @@ consButton.on('click', function(){
 	}
 })
 
-//button click returns random vowel pushes letter to list array
+//button click returns random vowel then pushes letter to list array
 vowButton.on('click', function(){
 	if (!numMax) {
 	var random = generate(vowels);
