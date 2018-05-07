@@ -11,7 +11,6 @@ consButton.on('click', function(){
 	list.push(random);
 	letters.text(list);
 	} else {
-		return null;
 	}
 })
 
@@ -22,7 +21,6 @@ vowButton.on('click', function(){
 	list.push(random);
 	letters.text(list);
 	} else {
-		return null;
 	}
 })
 
@@ -40,7 +38,6 @@ function generate(arr) {
 	var char = arr[random];		
 	} 
 	if(list.length === 8) {
-		list.length = 8;
 		numMax = true;
 	}
 	return char;
