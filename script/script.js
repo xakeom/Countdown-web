@@ -1,20 +1,29 @@
 var consButton = $("#consonant");
 var vowButton = $("#vowel");
 var letters = $(".list");
+var numMax = false;
 var list = [];
 
 //button click returns random consonant pushes letter to list array
 consButton.on('click', function(){
+	if(!numMax) {
 	var random = generate(consonants);
 	list.push(random);
 	letters.text(list);
+	} else {
+		return null;
+	}
 })
 
 //button click returns random vowel pushes letter to list array
 vowButton.on('click', function(){
+	if (!numMax) {
 	var random = generate(vowels);
 	list.push(random);
 	letters.text(list);
+	} else {
+		return null;
+	}
 })
 
 
@@ -27,6 +36,12 @@ var vowels = ["A","E","I","O","U","Y"];
 //generate random letter
 function generate(arr) {
 	var random = Math.floor(Math.random() * arr.length-1) + 1;
-	var char = arr[random];
+	if(!numMax) {
+	var char = arr[random];		
+	} 
+	if(list.length === 8) {
+		list.length = 8;
+		numMax = true;
+	}
 	return char;
 }
