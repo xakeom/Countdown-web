@@ -26,7 +26,7 @@ vowButton.on('click', function(){
 })
 
 resetButton.on('click', function(){
-	reset();
+	//needs some work
 })
 
 $("#team1Input").keypress(function(event){
@@ -69,10 +69,6 @@ function generate(arr) {
 	return char;
 }
 
-function reset(arr){
-	arr = [];
-}
-
 //timer function from stackoverflow
 function timer(time,update,complete) {
     var start = new Date().getTime();
@@ -86,8 +82,6 @@ function timer(time,update,complete) {
     },100); // the smaller this number, the more accurate the timer will be
 }
 
-
-
 $("#start").on('click', function(){
 	// milliseconds 
 	timer(60000, function(timeleft) {
@@ -99,3 +93,4 @@ $("#start").on('click', function(){
     }
 );
 });
+
