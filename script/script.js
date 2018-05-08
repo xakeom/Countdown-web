@@ -1,5 +1,6 @@
 var consButton = $("#consonant");
 var vowButton = $("#vowel");
+var resetButton = $("#reset");
 var letters = $(".list");
 var numMax = false;
 var list = [];
@@ -22,6 +23,10 @@ vowButton.on('click', function(){
 	letters.text(list);
 	} else {
 	}
+})
+
+resetButton.on('click', function(){
+	reset();
 })
 
 $("#team1Input").keypress(function(event){
@@ -63,3 +68,34 @@ function generate(arr) {
 	}
 	return char;
 }
+
+function reset(arr){
+	arr = [];
+}
+
+//timer function from stackoverflow
+function timer(time,update,complete) {
+    var start = new Date().getTime();
+    var interval = setInterval(function() {
+        var now = time-(new Date().getTime()-start);
+        if( now <= 0) {
+            clearInterval(interval);
+            complete();
+        }
+        else update(Math.floor(now/1000));
+    },100); // the smaller this number, the more accurate the timer will be
+}
+
+
+
+$("#start").on('click', function(){
+	// milliseconds 
+	timer(60000, function(timeleft) {
+	// called every step to update the visible countdown
+    $(".timer").text(timeleft)		
+    },
+    function() { // what to do after
+    $(".timer").text("Time's up!!!");
+    }
+);
+});
