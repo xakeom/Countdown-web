@@ -24,6 +24,27 @@ vowButton.on('click', function(){
 	}
 })
 
+$("#team1Input").keypress(function(event){
+	if(event.which === 13){
+		//grabbing new todo text from input
+		var teamName1 = $(this).val();
+		$(this).val("");
+		$(this).addClass("done");
+		//create a new li and add to ul
+		$("#team1").text(teamName1);
+	}
+});
+
+$("#team2Input").keypress(function(event){
+	if(event.which === 13){
+		//grabbing new todo text from input
+		var teamName2 = $(this).val();
+		$(this).val("");
+		$(this).addClass("done");
+		//create a new li and add to ul
+		$("#team2").text(teamName2);
+	}
+});
 
 //setup array for consonants
 var consonants = ["B","C","D","F","G","H","J","K","L","M","N","P","Q","R","S","T","V","X","Z","W"];
