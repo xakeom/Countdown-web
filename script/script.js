@@ -6,12 +6,13 @@ var letters = $(".list");
 var numMax = false;
 var list = [];
 
+
 //button click returns random consonant then pushes letter to list array
 consButton.on('click', function(){
 	if(!numMax) {
 	var random = generate(consonants);
 	list.push(random);
-	letters.text(list);
+	letters.text(list.join(" "));
 	} else {
 	}
 })
@@ -21,7 +22,7 @@ vowButton.on('click', function(){
 	if (!numMax) {
 	var random = generate(vowels);
 	list.push(random);
-	letters.text(list);
+	letters.text(list.join(" "));
 	} else {
 	}
 })
@@ -75,7 +76,7 @@ var vowels = ["A","E","I","O","U","Y"];
 function generate(arr) {
 	var random = Math.floor(Math.random() * arr.length-1) + 1;
 	if(!numMax) {
-	var char = arr[random];		
+	var char = arr[random];	
 	} 
 	if(list.length === 8) {
 		numMax = true;
