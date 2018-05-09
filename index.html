@@ -6,15 +6,19 @@
 	<link rel="stylesheet" href="style/style.css">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/all.css" integrity="sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9" crossorigin="anonymous">
 	<link href="https://fonts.googleapis.com/css?family=Oxygen:400,700" rel="stylesheet">
+	<link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
 	<script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 </head>
 <body>
-<div>
+<div class="container">
+	
 <h1>Countdown</h1>
 
-<div>
-<h2 id="team1">Team One</h2>
-<h2 id="team2">Team Two</h2>
+<div class="teams">
+<h2 id="team1" class="done">Team One</h2>
+<h2 id="team2" class="done">Team Two</h2>
+<input id="team1Input" type="text" class="teaminputs" placeholder="team1">
+<input id="team2Input" type="text" class="teaminputs" placeholder="team2">
 </div>
 
 <div class="letters">
@@ -22,21 +26,16 @@
 </div>
 
 <div class="buttons">
-<button id="consonant" class="bttn">Consonant</button>
-<button id="vowel" class="bttn">Vowel</button>
-<button id="clear">Clear letters</button>
-</div>
-
-<div>
-<input id="team1Input" type="text" placeholder="team1">
-<input id="team2Input" type="text" placeholder="team2">
+<button id="consonant" class="action-button shadow animate green">Consonant</button>
+<button id="vowel" class="action-button shadow animate green">Vowel</button>
+<button id="clear" class="action-button shadow animate green">Clear letters</button>
 </div>
 
 <div class="countdown">
 <p class="timer">60</p>
-<button id="start">Start</button>
-<button id="stop">Stop</button>
-<button id="reset">Reset</button>
+<button id="start" class="action-button shadow animate green">Start</button>
+<button id="stop" class="action-button shadow animate green">Pause</button>
+<button id="reset" class="action-button shadow animate green">Reset</button>
 </div>
 
 </div>

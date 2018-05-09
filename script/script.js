@@ -34,9 +34,10 @@ $("#team1Input").keypress(function(event){
 		//grabbing new todo text from input
 		var teamName1 = $(this).val();
 		$(this).val("");
-		$(this).addClass("done");
+		$(this).toggleClass("done");
 		//create a new li and add to ul
 		$("#team1").text(teamName1);
+		$("#team1").toggleClass("done");
 	}
 });
 
@@ -45,9 +46,10 @@ $("#team2Input").keypress(function(event){
 		//grabbing new todo text from input
 		var teamName2 = $(this).val();
 		$(this).val("");
-		$(this).addClass("done");
+		$(this).toggleClass("done");
 		//create a new li and add to ul
 		$("#team2").text(teamName2);
+		$("#team2").toggleClass("done");
 	}
 });
 

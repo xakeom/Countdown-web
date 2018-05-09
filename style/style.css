@@ -1,3 +1,8 @@
+html {
+	max-height: 1080px;
+	max-width: 1920px;
+}
+
 body {
 	font-family: 'Oxygen', sans-serif;
 	background: rgba(194,215,229,1);
@@ -10,24 +15,41 @@ body {
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c2d7e5', endColorstr='#7ba3c1', GradientType=1 );
 }
 
-div {
-	margin: 100px auto;
-	width: 70%;
-}
-
 h1 {
 	text-align: center;
 	font-size: 60px;
+	margin-bottom: 0px;
+	background-color: #5CE28E;
+	border: 2px solid #7B78D2;
 }
 
 h2 {
 	float:left; 
-	display:inline; 
+	display:inline;
 	width: 49%;
+	font-size: 30px;
 }
 
 h2:nth-of-type(2) {
 	text-align: right;
+}
+
+.container {
+	margin: 80px auto;
+	width: 70%;
+}
+
+.teams {
+	margin-top: 10px;
+}
+
+.teaminputs {
+	margin-top: 20px;
+	float:left; 
+	display:inline;
+	width: 10em;
+	font-size: 30px;
+	background: rgba(194,215,229,1);
 }
 
 .timer {
@@ -36,15 +58,18 @@ h2:nth-of-type(2) {
 }
 
 .done {
-	visibility: hidden;
+	display: none;
 }
 
 .letters {
 	text-align: center;
+	background-color: #5CE28E;
+	border: 2px solid #7B78D2;
 }
 
 .list {
 	font-size: 60px;
+	margin: 5% auto;
 }
 
 .buttons {
@@ -53,10 +78,48 @@ h2:nth-of-type(2) {
 
 .countdown {
 	text-align: center;
+	margin-top: 20px;
+}
+
+.animate
+{
+	transition: all 0.1s;
+	-webkit-transition: all 0.1s;
+}
+
+.action-button
+{
+	position: relative;
+	width: 11em;
+	padding: 10px 40px;
+  	margin: 0px 10px 10px 0px;
+/*  float: left;*/
+	border-radius: 10px;
+	font-family: 'Pacifico', cursive;
+	font-size: 25px;
+	color: #FFF;
+	text-decoration: none;	
+}
+
+button:focus {
+    outline: 0;
+}
+
+.green
+{
+	background-color: #7B78D2;
+	border-bottom: 5px solid #7B78D2;
+	text-shadow: 0px -2px #7B78D2;
+}
+.action-button:active
+{
+	transform: translate(0px,5px);
+  	-webkit-transform: translate(0px,5px);
+	border-bottom: 1px solid;
 }
 
 #team2Input {
 	float: right;
-
+	text-align: right;
 }
 
