@@ -26,12 +26,23 @@ h1 {
 h2 {
 	float:left; 
 	display:inline;
-	width: 49%;
+	width: 10em;
 	font-size: 30px;
 }
 
 h2:nth-of-type(2) {
 	text-align: right;
+	float: right;
+}
+
+div {
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.bordered {
+	border: 3px solid #7B78D2;
+	background: #5CE28E;
 }
 
 .container {
@@ -41,6 +52,7 @@ h2:nth-of-type(2) {
 
 .teams {
 	margin-top: 10px;
+	padding: 30px;
 }
 
 .teaminputs {
@@ -123,3 +135,8 @@ button:focus {
 	text-align: right;
 }
 
+#resetTeams {
+	float: left;
+	text-align: center;
+	margin-left: 15%;
+}

@@ -1,6 +1,7 @@
 var consButton = $("#consonant");
 var vowButton = $("#vowel");
 var resetButton = $("#reset");
+var resetTeams = $("#resetTeams");
 var letters = $(".list");
 var numMax = false;
 var list = [];
@@ -22,6 +23,17 @@ vowButton.on('click', function(){
 	list.push(random);
 	letters.text(list);
 	} else {
+	}
+})
+
+resetTeams.on('click', function(){
+	if (!$("#team1").hasClass("done") && !$("#team2").hasClass("done")) {
+		$("#team1").toggleClass("done");
+		$("#team2").toggleClass("done");
+		$("#team1Input").toggleClass("done");
+		$("#team2Input").toggleClass("done");
+	} else {
+		alert("Type a team name!");
 	}
 })
 
@@ -71,7 +83,7 @@ function generate(arr) {
 	return char;
 }
 
-//timer function from stackoverflow
+//functional timer:
     var CCOUNT = 60;
     
     var t;
