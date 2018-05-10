@@ -5,10 +5,10 @@ html {
 
 body {
 	font-family: 'Oxygen', sans-serif;
-	background: #11998e;  /* fallback for old browsers */
-background: -webkit-linear-gradient(left, #38ef7d, #11998e);
-background: -o-linear-gradient(left, #38ef7d, #11998e);
-background: linear-gradient(to right, #38ef7d, #11998e);
+	background: #525252;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #3d72b4, #525252);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #3d72b4, #525252); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
   /* Chrome 10-25, Safari 5.1-6 */ /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
 }
@@ -20,7 +20,7 @@ h1 {
 	font-size: 60px;
 	margin-bottom: 0px;	
 	background-color: #CFDAF5;
-	border: 2px solid #7B78D2;
+	border: 2px solid white;
 }
 
 h2 {
@@ -45,7 +45,7 @@ input[type="text"], textarea {
 }
 
 .bordered {
-	border: 3px solid #7B78D2;
+	border: 3px solid white;
 	letter-spacing: 0.2em;
 	background-color: #CFDAF5;
 }
@@ -76,7 +76,7 @@ input[type="text"], textarea {
 	margin: 0.3em;
 	border-radius: 1%;
 	border: 4px solid white;
-	background-color: black;
+	background-color: #1b3d54;
 	color: white;
 }
 
@@ -91,7 +91,8 @@ input[type="text"], textarea {
 .letters {
 	text-align: center;
 	background-color: #CFDAF5;
-	border: 2px solid #7B78D2;
+	border: 2px solid white;
+	font-style: italic;
 }
 
 .list {
@@ -105,7 +106,7 @@ input[type="text"], textarea {
 
 .countdown {
 	text-align: center;
-	margin-top: 40px;
+	margin-top: 20px;
 }
 
 
@@ -182,6 +183,6 @@ button:focus {
 
 .teamscores {
 	border: 2px solid white;
-	background-color: black;
+	background-color: #1b3d54;
 	color: white;
 }
