@@ -2,9 +2,13 @@ var consButton = $("#consonant");
 var vowButton = $("#vowel");
 var clearLetters = $("#clear");
 var resetTeams = $("#resetTeams");
+var addScoreT1 = $("#addScoreTeam1");
+var addScoreT2 = $("#addScoreTeam2");
 var letters = $(".list");
 var numMax = false;
 var list = [];
+var team1Score = 0;
+var team2Score = 0;
 
 
 //button click returns random consonant then pushes letter to list array
@@ -25,7 +29,7 @@ vowButton.on('click', function(){
 	letters.text(list.join(" "));
 	} else {
 	}
-})
+});
 
 //button click resets the inputs if both team names are entered
 resetTeams.on('click', function(){
@@ -34,16 +38,29 @@ resetTeams.on('click', function(){
 		$("#team2").toggleClass("done");
 		$("#team1Input").toggleClass("done");
 		$("#team2Input").toggleClass("done");
+		team1Score = 0;
+		team2Score = 0;
+		$("#team1Score").text(team1Score);
+		$("#team2Score").text(team2Score);
 	} else {
 		alert("Type a team name!");
 	}
-})
+});
 
 clearLetters.on('click', function(){
 	reset(list);
 	letters.text("Add some letters!");
-/*	letters.text(list.join(" "));*/
-})
+});
+
+addScoreT1.on('click', function(){
+	team1Score++;
+	$("#team1Score").text(team1Score);
+});
+
+addScoreT2.on('click', function(){
+	team2Score++;
+	$("#team2Score").text(team2Score);
+});
 
 $("#team1Input").keypress(function(event){
 	if(event.which === 13){
