@@ -1,16 +1,22 @@
 var consButton = $("#consonant");
 var vowButton = $("#vowel");
-var resetButton = $("#reset");
+var clearLetters = $("#clear");
+var resetTeams = $("#resetTeams");
+var addScoreT1 = $("#addScoreTeam1");
+var addScoreT2 = $("#addScoreTeam2");
 var letters = $(".list");
 var numMax = false;
 var list = [];
+var team1Score = 0;
+var team2Score = 0;
+
 
 //button click returns random consonant then pushes letter to list array
 consButton.on('click', function(){
 	if(!numMax) {
 	var random = generate(consonants);
 	list.push(random);
-	letters.text(list);
+	letters.text(list.join(" "));
 	} else {
 	}
 })
@@ -20,23 +26,51 @@ vowButton.on('click', function(){
 	if (!numMax) {
 	var random = generate(vowels);
 	list.push(random);
-	letters.text(list);
+	letters.text(list.join(" "));
 	} else {
 	}
-})
+});
 
-resetButton.on('click', function(){
-	//needs some work
-})
+//button click resets the inputs if both team names are entered
+resetTeams.on('click', function(){
+	if (!$("#team1").hasClass("done") && !$("#team2").hasClass("done")) {
+		$("#team1").toggleClass("done");
+		$("#team2").toggleClass("done");
+		$("#team1Input").toggleClass("done");
+		$("#team2Input").toggleClass("done");
+		team1Score = 0;
+		team2Score = 0;
+		$("#team1Score").text(team1Score);
+		$("#team2Score").text(team2Score);
+	} else {
+		alert("Type a team name!");
+	}
+});
+
+clearLetters.on('click', function(){
+	reset(list);
+	letters.text("Add some letters!");
+});
+
+addScoreT1.on('click', function(){
+	team1Score++;
+	$("#team1Score").text(team1Score);
+});
+
+addScoreT2.on('click', function(){
+	team2Score++;
+	$("#team2Score").text(team2Score);
+});
 
 $("#team1Input").keypress(function(event){
 	if(event.which === 13){
 		//grabbing new todo text from input
 		var teamName1 = $(this).val();
 		$(this).val("");
-		$(this).addClass("done");
+		$(this).toggleClass("done");
 		//create a new li and add to ul
 		$("#team1").text(teamName1);
+		$("#team1").toggleClass("done");
 	}
 });
 
@@ -45,9 +79,10 @@ $("#team2Input").keypress(function(event){
 		//grabbing new todo text from input
 		var teamName2 = $(this).val();
 		$(this).val("");
-		$(this).addClass("done");
+		$(this).toggleClass("done");
 		//create a new li and add to ul
 		$("#team2").text(teamName2);
+		$("#team2").toggleClass("done");
 	}
 });
 
@@ -61,7 +96,7 @@ var vowels = ["A","E","I","O","U","Y"];
 function generate(arr) {
 	var random = Math.floor(Math.random() * arr.length-1) + 1;
 	if(!numMax) {
-	var char = arr[random];		
+	var char = arr[random];	
 	} 
 	if(list.length === 8) {
 		numMax = true;
@@ -69,7 +104,7 @@ function generate(arr) {
 	return char;
 }
 
-//timer function from stackoverflow
+//functional timer:
     var CCOUNT = 60;
     
     var t;
@@ -110,11 +145,13 @@ function generate(arr) {
 
     $("#stop").click(function() {
     	cdpause();
-    })
+    });
 
     $("#reset").click(function() {
     	cdreset();
-    })
+    });
 
-
-
+function reset(arr) {
+		arr.splice(0, arr.length);
+		numMax = false;
+};
