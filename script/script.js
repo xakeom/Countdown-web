@@ -1,6 +1,6 @@
 var consButton = $("#consonant");
 var vowButton = $("#vowel");
-var resetButton = $("#reset");
+var clearLetters = $("#clear");
 var resetTeams = $("#resetTeams");
 var letters = $(".list");
 var numMax = false;
@@ -27,6 +27,7 @@ vowButton.on('click', function(){
 	}
 })
 
+//button click resets the inputs if both team names are entered
 resetTeams.on('click', function(){
 	if (!$("#team1").hasClass("done") && !$("#team2").hasClass("done")) {
 		$("#team1").toggleClass("done");
@@ -38,8 +39,10 @@ resetTeams.on('click', function(){
 	}
 })
 
-resetButton.on('click', function(){
-	//needs some work
+clearLetters.on('click', function(){
+	reset(list);
+	letters.text("Add some letters!");
+/*	letters.text(list.join(" "));*/
 })
 
 $("#team1Input").keypress(function(event){
@@ -125,11 +128,13 @@ function generate(arr) {
 
     $("#stop").click(function() {
     	cdpause();
-    })
+    });
 
     $("#reset").click(function() {
     	cdreset();
-    })
+    });
 
-
-
+function reset(arr) {
+		arr.splice(0, arr.length);
+		numMax = false;
+};
