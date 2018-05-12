@@ -33,11 +33,11 @@ vowButton.on('click', function(){
 
 //button click resets the inputs if both team names are entered
 resetTeams.on('click', function(){
-	if (!$("#team1").hasClass("done") && !$("#team2").hasClass("done")) {
-		$("#team1").toggleClass("done");
-		$("#team2").toggleClass("done");
-		$("#team1Input").toggleClass("done");
-		$("#team2Input").toggleClass("done");
+	if (!$("#team1").hasClass("hide") && !$("#team2").hasClass("hide")) {
+		$("#team1").toggleClass("hide");
+		$("#team2").toggleClass("hide");
+		$("#team1Input").toggleClass("hide");
+		$("#team2Input").toggleClass("hide");
 		team1Score = 0;
 		team2Score = 0;
 		$("#team1Score").text(team1Score);
@@ -67,10 +67,10 @@ $("#team1Input").keypress(function(event){
 		//grabbing new todo text from input
 		var teamName1 = $(this).val();
 		$(this).val("");
-		$(this).toggleClass("done");
+		$(this).toggleClass("hide");
 		//create a new li and add to ul
 		$("#team1").text(teamName1);
-		$("#team1").toggleClass("done");
+		$("#team1").toggleClass("hide");
 	}
 });
 
@@ -79,10 +79,10 @@ $("#team2Input").keypress(function(event){
 		//grabbing new todo text from input
 		var teamName2 = $(this).val();
 		$(this).val("");
-		$(this).toggleClass("done");
+		$(this).toggleClass("hide");
 		//create a new li and add to ul
 		$("#team2").text(teamName2);
-		$("#team2").toggleClass("done");
+		$("#team2").toggleClass("hide");
 	}
 });
 
