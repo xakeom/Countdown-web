@@ -9,6 +9,12 @@ var numMax = false;
 var list = [];
 var team1Score = 0;
 var team2Score = 0;
+//setup array for consonants
+var consonants = ["B","C","D","F","G","H","J","K","L","M","N","P","Q","R","S","T","V","X","Z","W"];
+//setup array for vowels
+var vowels = ["A","E","I","O","U","Y"];
+var audioElement = document.createElement('audio');
+audioElement.setAttribute('src', 'lib/sound/countdown.wav');
 
 
 //button click returns random consonant then pushes letter to list array
@@ -86,12 +92,6 @@ $("#team2Input").keypress(function(event){
 	}
 });
 
-//setup array for consonants
-var consonants = ["B","C","D","F","G","H","J","K","L","M","N","P","Q","R","S","T","V","X","Z","W"];
-
-//setup array for vowels
-var vowels = ["A","E","I","O","U","Y"];
-
 //generate random letter
 function generate(arr) {
 	var random = Math.floor(Math.random() * arr.length-1) + 1;
@@ -120,6 +120,8 @@ function generate(arr) {
         // starts countdown
         cddisplay();
         if (count == 0) {
+        	restart();
+        	audioElement.pause();
             // time is up
         } else {
             count--;
@@ -141,17 +143,24 @@ function generate(arr) {
 
     $("#start").click(function() {
     	countdown();
-    });
+     	audioElement.play();
+});
 
     $("#stop").click(function() {
     	cdpause();
+    	audioElement.pause();
     });
 
     $("#reset").click(function() {
     	cdreset();
+        audioElement.currentTime = 0;
     });
 
 function reset(arr) {
 		arr.splice(0, arr.length);
 		numMax = false;
 };
+    
+function restart() {
+        audioElement.currentTime = 0;
+    };
