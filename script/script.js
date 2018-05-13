@@ -154,6 +154,7 @@ function generate(arr) {
     $("#reset").click(function() {
     	cdreset();
         audioElement.currentTime = 0;
+        audioElement.pause();
     });
 
 function reset(arr) {

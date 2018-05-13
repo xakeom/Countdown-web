@@ -5,10 +5,15 @@
 
 body {
 	font-family: 'Oxygen', sans-serif;
-	background: #525252;  /* fallback for old browsers */  /* Chrome 10-25, Safari 5.1-6 */
-	background: -webkit-linear-gradient(left, #3d72b4, #525252);
+/*	background-image: url("https://media.giphy.com/media/xT9IgN8YKRhByRBzMI/giphy.gif");
+	background-size: 100%;*/
+
+
+
+	/*background: #525252;*/  /* fallback for old browsers */  /* Chrome 10-25, Safari 5.1-6 */
+	/*background: -webkit-linear-gradient(left, #3d72b4, #525252);
 	background: -o-linear-gradient(left, #3d72b4, #525252);
-	background: linear-gradient(to right, #3d72b4, #525252); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	background: linear-gradient(to right, #3d72b4, #525252);*/ /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
   	/* Chrome 10-25, Safari 5.1-6 */ /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
@@ -61,9 +66,15 @@ button:focus {
 	background-color: #CFDAF5;
 }
 
+.main {
+
+
+}
+
 .container {
 	margin: 60px auto;
 	width: 60%;
+
 }
 
 .teams {
