@@ -70,7 +70,7 @@ button:focus {
   	align-content: center;
 }
 
-.teaminputs {
+.teaminput {
 	display:inline;
 	width: 10em;
 	font-size: 30px;
@@ -149,7 +149,7 @@ button:focus {
 	top:1px;
 }
 
-.teamscores {
+.teamscore {
 	border: 2px solid white;
 	background-color: #1b3d54;
 	color: white;
@@ -188,11 +188,11 @@ button:focus {
 	order:3;
 }
 
-#team2Input {
+input:nth-of-type(2) {
 	order: 4;
 }
 
-#addScoreTeam2 {
+.addscore:nth-of-type(2) {
 	order: 5;
 }
 
