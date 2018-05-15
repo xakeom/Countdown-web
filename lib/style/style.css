@@ -53,11 +53,6 @@ button:focus {
 	background-color: #CFDAF5;
 }
 
-.main {
-
-
-}
-
 .container {
 	margin: 60px auto;
 	width: 60%;
@@ -153,6 +148,7 @@ button:focus {
 	border: 2px solid white;
 	background-color: #1b3d54;
 	color: white;
+	cursor: pointer;
 }
 
 .animate {
