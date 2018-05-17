@@ -53,10 +53,15 @@ button:focus {
 	background-color: #CFDAF5;
 }
 
+img {
+	width: 500px;
+	height: 750px;
+}
+
 .container {
 	margin: 60px auto;
 	width: 60%;
-
+	position: relative;
 }
 
 .teams {
@@ -75,7 +80,7 @@ button:focus {
 .timer {
 	letter-spacing: 0.2em;
 	font-size: 60px;
-	margin: 0.3em;
+	margin: 55px 0;
 	border-radius: 1%;
 	border: 4px solid white;
 	background-color: #1b3d54;
@@ -100,6 +105,7 @@ button:focus {
 	border: 2px solid white;
 	font-style: italic;
 	box-shadow: 0 0 3px rgba(0,0,0, 0.7);
+	margin: 50px 0;
 }
 
 .list {
@@ -114,7 +120,6 @@ button:focus {
 
 .countdown {
 	text-align: center;
-	margin-top: 20px;
 }
 
 .bttn {
