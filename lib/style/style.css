@@ -58,16 +58,6 @@ img {
 	height: 750px;
 }
 
-.gif {
-	float: left;
-	margin-left: 15px;
-}
-
-.gif:nth-of-type(2) {
-	float: right;
-	margin-right: 15px;
-}
-
 .container {
 	margin: 60px auto;
 	width: 60%;
@@ -127,10 +117,6 @@ img {
 .buttons {
 	text-align: center;
 }
-
-/*.gif {
-	display: flex;
-}*/
 
 .countdown {
 	text-align: center;
