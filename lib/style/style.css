@@ -53,11 +53,6 @@ button:focus {
 	background-color: #CFDAF5;
 }
 
-img {
-	width: 500px;
-	height: 750px;
-}
-
 .container {
 	margin: 60px auto;
 	width: 60%;
@@ -86,10 +81,6 @@ img {
 	background-color: #1b3d54;
 	color: white;
 	box-shadow: 0 0 3px rgba(0,0,0, 0.7);
-}
-
-.done {
-	display: none;
 }
 
 .hide {
@@ -156,12 +147,6 @@ img {
 	cursor: pointer;
 }
 
-.animate {
-	animation-duration: 2s;
-	animation-name: slidein;
-}
-
-
 /*Teams container flexbox setup: */
 
 .scores {
@@ -195,17 +180,4 @@ input:nth-of-type(2) {
 
 .addscore:nth-of-type(2) {
 	order: 5;
-}
-
-/*keyframes:; */
-@keyframes slidein {
-	from {
-		margin-right: 100%;
-		width: 300%;
-	}
-
-	to {
-    margin-right: 0%;
-    width: 100%;
-	}
 }
